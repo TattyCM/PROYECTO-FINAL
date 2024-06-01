@@ -22,9 +22,9 @@ public class Cliente extends Persona{
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce ID de Cliente: ");
-        ID_Cliente = sc.nextInt();
+        ID_Cliente = Leer.datoInt();
         System.out.println("Introduce presupuesto: ");
-        presupuesto = sc.nextInt();
+        presupuesto = Leer.datoInt();
     }
 
     void mostrarC()
@@ -32,6 +32,12 @@ public class Cliente extends Persona{
         System.out.println(ID_Cliente + " " + presupuesto);
     }
 
+    void requerimientos()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce presupuesto: ");
+
+    }
 
 
 }
