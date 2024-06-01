@@ -42,7 +42,7 @@ public class Persona {
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce nombre: ");
-        nombre = Leer.dato(); //revisar como usar la clase leer
+        nombre = Leer.dato();
         System.out.println("Introduce apellido: ");
         apellido = Leer.dato();
         System.out.println("Introduce CI: ");
