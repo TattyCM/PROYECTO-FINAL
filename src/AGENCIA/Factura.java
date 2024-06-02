@@ -64,6 +64,23 @@ public class Factura {
 		matricula = a;
     }
 
+	void leer() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce el Vendedor: ");
+        vendedor = scanner.nextLine();
+        System.out.print("Introduce el Cliente: ");
+        cliente = scanner.nextLine();
+        System.out.print("Introduce el Auto: ");
+        auto = scanner.nextLine();
+        System.out.print("Introduce el Matricula: ");
+        matricula= scanner.nextLine();
+        scanner.nextLine();
+        System.out.print("Introduce fecha: ");
+        fecha = scanner.nextInt();
+    }
+
+
+
 
 	void mostrar()
 	{
