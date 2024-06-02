@@ -27,6 +27,32 @@ public class Auto {
     	tipoCombustible = "Gasolina" ;
     }
 
+    Auto(int d, int e, String f, String g, int h,String i)
+	{
+		marca= "Toyota";
+		modelo= "Hilux";
+		color= "Rojo";
+		precio= d;
+		descuento= e;
+		caja= f;
+		maletera= g;
+		capacidadMotor = h;
+		tipoCombustible = i;
+	}
+
+	Auto( String f, String g, int h,String i)
+	{
+		marca= "Toyota";
+		modelo = "RAV-4 Aqya";
+		color= "Gris";
+		precio= 200000;
+		descuento= 15000;
+		caja= f;
+		maletera= g;
+		capacidadMotor = h;
+		tipoCombustible = i;
+	}
+
     Auto(String a, String b, String c, int d, int e, String f, String g, int h, String i){
     	marca = a;
     	modelo = b;
@@ -147,10 +173,13 @@ public class Auto {
     void mismoPre(Auto A)
 	{
 		if(precio==A.obtPrecio())
-		{
-			System.out.println("Tienen el mismo precio");
-		}
+		{System.out.println("Tienen el mismo precio");}
 		else {System.out.println("Tienen distintos precio");}
 	}
+
+    int PrecioFinal()
+	{return precio - descuento;}
+    int ObtenerFinal(Auto automovil)
+	{return automovil.PrecioFinal();}
 
 }
