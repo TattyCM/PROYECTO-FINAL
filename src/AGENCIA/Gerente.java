@@ -24,7 +24,6 @@ public class Gerente {
     void ponS(int a)
     {sueldoG = a;}
 
-
     void leerV()
     {
         Scanner sc = new Scanner(System.in);

@@ -10,6 +10,27 @@ public class Vendedor extends Persona{
 
     public
 
+    Vendedor()
+    {
+    	super();
+    	ID_vendedor = 12345;
+    	comision = 2000;
+    }
+
+    Vendedor(int a, int b)
+    {
+    	super();
+    	ID_vendedor = a;
+    	comision = b;
+    }
+    Vendedor(String a , String b, int c,int d, int e){
+    	super.ponn(a);
+    	super.pona(b);
+    	super.ponnc(c);
+    	ID_vendedor = d;
+    	comision = e;
+    }
+
     int obtI()
     {return ID_vendedor;}
     int obtC()
@@ -23,6 +44,12 @@ public class Vendedor extends Persona{
     {comision = a;}
     void ponS(int a)
     {sueldo = a;}
+    void ponNombre(String a)
+    {super.ponn(a);}
+    void ponApellido(String a)
+    {super.pona(a);}
+    void ponCi(int a)
+    {super.ponnc(a);}
 
 
     void leerV()
@@ -40,5 +67,7 @@ public class Vendedor extends Persona{
     {
         System.out.println(ID_vendedor + " " + sueldo + " " + sueldo);
     }
+
+    //METODOS REVISAR
 
 }
