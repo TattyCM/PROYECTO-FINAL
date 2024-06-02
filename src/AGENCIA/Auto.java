@@ -53,7 +53,8 @@ public class Auto {
 		tipoCombustible = i;
 	}
 
-    Auto(String a, String b, String c, int d, int e, String f, String g, int h, String i){
+    Auto(String a, String b, String c, int d, int e, String f, String g, int h, String i)
+    {
     	marca = a;
     	modelo = b;
     	color = c;
@@ -65,66 +66,48 @@ public class Auto {
     	tipoCombustible = i ;
     }
 
-    String obtMarca() {
-        return marca;
-    }
-    String obtModelo() {
-        return modelo;
-    }
-    String obtColor() {
-        return color;
-    }
-    int obtPrecio() {
-        return precio;
-    }
-    int obtDescuento() {
-        return descuento;
-    }
-    String obtCaja() {
-        return caja;
-    }
-    String obtMaletera() {
-        return maletera;
-    }
-    int obtCapacidadMotor() {
-        return capacidadMotor;
-    }
-    String obtTipoCombustible() {
-        return tipoCombustible;
-    }
+    String obtMarca()
+    {return marca;}
+    String obtModelo()
+    {return modelo;}
+    String obtColor()
+    {return color;}
+    int obtPrecio()
+    {return precio;}
+    int obtDescuento()
+    {return descuento;}
+    String obtCaja()
+    {return caja;}
+    String obtMaletera()
+    {return maletera;}
+    int obtCapacidadMotor()
+    {return capacidadMotor;}
+    String obtTipoCombustible()
+    {return tipoCombustible;}
 
 
-
-    void ponMarca(String a) {
-        this.marca = a;
-    }
-    void ponModelo(String a) {
-        this.modelo = a;
-    }
-    void ponColor(String a) {
-        this.color = a;
-    }
-    void ponPrecio(int a) {
-        this.precio = a;
-    }
-    void ponDescuento(int a) {
-        this.descuento = a;
-    }
-    void ponCaja(String a) {
-        this.caja = a;
-    }
-    void ponMaletera(String a) {
-        this.maletera = a;
-    }
-    void ponCapacidadMotor(int a) {
-        this.capacidadMotor = a;
-    }
-    void ponTipoCombustible(String a) {
-        this.tipoCombustible = a;
-    }
+    void ponMarca(String a)
+    {this.marca = a;}
+    void ponModelo(String a)
+    {this.modelo = a;}
+    void ponColor(String a)
+    {this.color = a;}
+    void ponPrecio(int a)
+    {this.precio = a;}
+    void ponDescuento(int a)
+    {this.descuento = a;}
+    void ponCaja(String a)
+    {this.caja = a;}
+    void ponMaletera(String a)
+    {this.maletera = a;}
+    void ponCapacidadMotor(int a)
+    {this.capacidadMotor = a;}
+    void ponTipoCombustible(String a)
+    {this.tipoCombustible = a;}
 
 
-    void leer() {
+    void leer()
+    {
         System.out.println("Ingrese la marca del auto: ");
         marca=Leer.dato();
         System.out.println("Ingrese el modelo del auto: ");
@@ -157,17 +140,14 @@ public class Auto {
         System.out.println("Tipo de combustible: " + tipoCombustible);
     }
 
-    void arrancar() {
-        System.out.println("Arrancando el auto...");
-    }
+    void arrancar()
+    {System.out.println("Arrancando el auto...");}
 
-    void acelerar() {
-        System.out.println("Acelerando el auto...");
-    }
+    void acelerar()
+    {System.out.println("Acelerando el auto...");}
 
-    void frenar() {
-        System.out.println("Frenando el auto...");
-    }
+    void frenar()
+    {System.out.println("Frenando el auto...");}
 
     //METODO A REVISAR
     void mismoPre(Auto A)

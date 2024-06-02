@@ -30,41 +30,31 @@ public class Factura {
 
 	}
 
-	String obtVen() {
-		return (vendedor);
-	}
+	String obtVen()
+	{return (vendedor);}
+	String obtCli()
+	{return (cliente);}
 
-	String obtCli() {
-		return (cliente);
-	}
+	String obtAuto()
+	{return (auto);}
+	int obtfe()
+	{return (fecha);}
+	String obtMat()
+	{return (matricula);}
 
-	String obtAuto() {
-		return (auto);
-	}
-	int obtfe() {
-		return (fecha);
-	}
-	String obtMat() {
-		return (matricula);
-	}
+	void ponVen(String a)
+	{vendedor = a;}
+	void ponCli(String a)
+	{cliente = a;}
+	void ponAuto(String a)
+	{auto = a;}
+	void ponFecha(int a)
+	{fecha = a;}
+	void ponMat(String a)
+	{matricula = a;}
 
-	void ponVen(String a) {
-		vendedor = a;
-	}
-	void ponCli(String a) {
-		cliente = a;
-	}
-	void ponAuto(String a) {
-		auto = a;
-	}
-	void ponFecha(int a) {
-		fecha = a;
-	}
-	void ponMat(String a) {
-		matricula = a;
-    }
-
-	void leer() {
+	void leer()
+	{
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el Vendedor: ");
         vendedor = scanner.nextLine();
@@ -84,8 +74,7 @@ public class Factura {
 
 	void mostrar()
 	{
-		System.out.println(vendedor +" "+ cliente +" "+ auto +
-				" "+ fecha +" "+ matricula);
+		System.out.println(vendedor +" "+ cliente +" "+ auto + " "+ fecha +" "+ matricula);
 	}
 
     //Revisar si puede tener mas metodos

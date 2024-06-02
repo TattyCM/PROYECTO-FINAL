@@ -2,7 +2,7 @@ package AGENCIA;
 
 import java.util.Scanner;
 
-public class Gerente {
+public class Gerente extends Persona{
     private
     int ID_Gerente;
     int comisionG;
