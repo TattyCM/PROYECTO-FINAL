@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Vendedor extends Persona{
     private
     int ID_vendedor;
-    int comision;
+    int cuota;
     int sueldo;
+    int año_ingreso;
 
     public
 
@@ -14,34 +15,43 @@ public class Vendedor extends Persona{
     {
     	super();
     	ID_vendedor = 12345;
-    	comision = 2000;
+    	cuota = 200000;
+        sueldo = 2000;
+        año_ingreso = 2001;
     }
 
-    Vendedor(int a, int b)
+    Vendedor(int a, int b, int c, int d)
     {
     	super();
     	ID_vendedor = a;
-    	comision = b;
+    	cuota = b;
+        sueldo = c;
+        año_ingreso = d;
     }
-    Vendedor(String a , String b, int c,int d, int e){
+
+    Vendedor(String a , String b, int c,int d, int e, int f, int g)
+    {
     	super.ponn(a);
     	super.pona(b);
     	super.ponnc(c);
     	ID_vendedor = d;
-    	comision = e;
+    	cuota = e;
+        sueldo = f;
+        año_ingreso = g;
+
     }
 
     int obtI()
     {return ID_vendedor;}
     int obtC()
-    {return comision;}
+    {return cuota;}
     int obtS()
     {return sueldo;}
 
     void ponI(int a)
     {ID_vendedor = a;}
     void ponC(int a)
-    {comision = a;}
+    {cuota = a;}
     void ponS(int a)
     {sueldo = a;}
     void ponNombre(String a)
@@ -52,13 +62,13 @@ public class Vendedor extends Persona{
     {super.ponnc(a);}
 
 
-    void leerV()
+    void leerV() //puede tener el mismo nombre que en persona, no se confunde de metodo
     {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce ID de Vendedor: ");
         ID_vendedor = Leer.datoInt();
         System.out.println("Introduce Comision: ");
-        comision = Leer.datoInt();
+        cuota = Leer.datoInt();
         System.out.println("Introduce sueldo: ");
         sueldo = Leer.datoInt();
     }

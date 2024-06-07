@@ -128,7 +128,8 @@ public class Auto {
         tipoCombustible=Leer.dato();
     }
 
-    void mostrar() {
+    void mostrar()
+    {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Color: " + color);

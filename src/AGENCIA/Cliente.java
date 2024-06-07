@@ -59,17 +59,9 @@ public class Cliente extends Persona{
     }
 
     void mostrarC()
-    {
-        System.out.println(ID_Cliente + " " + presupuesto);
-    }
+    {System.out.println(ID_Cliente + " " + presupuesto);}
 
-    //METODOS REVISAR
-    void Asesoramiento()
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce presupuesto: ");
 
-    }
 
 
 }
