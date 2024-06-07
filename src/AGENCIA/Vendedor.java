@@ -18,6 +18,14 @@ public class Vendedor extends Persona{
         año_ingreso = 2001;
     }
 
+    Vendedor(String a, String b, int c, int d)
+    {
+    	super(a, b, c, d);
+    	ID_vendedor = 12345;
+    	meta = 500000;
+        año_ingreso = 2012;
+    }
+
     Vendedor(String a, String b, int c, int d, int e, int f, int g)
     {
     	super(a, b, c, d);

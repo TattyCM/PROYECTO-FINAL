@@ -1,57 +1,52 @@
 package AGENCIA;
-
 import java.util.Scanner;
+
 public class Factura {
     private
-	String vendedor; //Vector?
-	String cliente; //Vector?
-	String auto; //Vector?
+	Vendedor Vendedor;
+	Cliente Cliente;
+	Auto Auto;
 	int fecha;
-	String matricula;
 
 	public
 
 	Factura()
 	{
-		vendedor="Agn. Mario Ortiz Guerra";
-		cliente="Manuel Villa Zambrana";
-		auto="Toyota Hilux";
-		fecha=05/01/2024;
-		matricula="H26-6PC";
-
+		fecha = 2023;
+		Vendedor V = new Vendedor();
+		Cliente C = new Cliente();
+		Auto A = new Auto();
 	}
-	Factura(String a, String b, String c, int d, String e)
+
+	Factura(int a)
 	{
-		vendedor=a;
-		cliente=b;
-		auto=c;
-		fecha=d;
-		matricula=e;
-
+		fecha = a;
+		Vendedor V = new Vendedor();
+		Cliente C = new Cliente();
+		Auto A = new Auto();
 	}
 
-	String obtVen()
-	{return (vendedor);}
-	String obtCli()
-	{return (cliente);}
+	//Getters agregados
+	Vendedor getVendedor()
+	{return Vendedor;}
+	Cliente getCliente()
+	{return Cliente;}
+	Auto getAuto()
+	{return Auto;}
+	//Getters de factura
+	int getFecha()
+	{return fecha;}
 
-	String obtAuto()
-	{return (auto);}
-	int obtfe()
-	{return (fecha);}
-	String obtMat()
-	{return (matricula);}
-
-	void ponVen(String a)
-	{vendedor = a;}
-	void ponCli(String a)
-	{cliente = a;}
-	void ponAuto(String a)
-	{auto = a;}
-	void ponFecha(int a)
+	//Setters agregados
+	void setVendedor(AGENCIA.Vendedor vendedor)
+	{Vendedor = vendedor;}
+	void setCliente(AGENCIA.Cliente cliente)
+	{Cliente = cliente;}
+	void setAuto(AGENCIA.Auto auto)
+	{Auto = auto;}
+	//Setters de factura
+	void setFecha(int a)
 	{fecha = a;}
-	void ponMat(String a)
-	{matricula = a;}
 
 	void leer()
 	{

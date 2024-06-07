@@ -12,7 +12,7 @@ public class Auto {
     int maletera; //para trabajar con No = 0 y Si = 1
     int capacidad_Motor; //El tamaño del motor se mide en litros
     String tipo_Combustible; //gas, gasolina, diesel, electricos
-    String matricula;
+    String matricula; //la matricula es unica para cada auto
 
     public
 
@@ -153,6 +153,9 @@ public class Auto {
     void frenar()
     {System.out.println("Frenando el auto...");}
 
+    int PrecioFinal()
+	{return precio - descuento;}
+
     //Este metodo puede ir a sala de exhibicion
     void comparaPrecio(Auto A)
 	{
@@ -161,8 +164,5 @@ public class Auto {
 		else
         {System.out.println("Tienen distintos precio");}
 	}
-
-    int PrecioFinal()
-	{return precio - descuento;}
 
 }
