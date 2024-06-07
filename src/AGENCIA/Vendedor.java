@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Vendedor extends Persona{
     private
     int ID_vendedor;
-    int cuota;
-    int sueldo;
+    int meta;
     int año_ingreso;
 
     public
@@ -15,69 +14,72 @@ public class Vendedor extends Persona{
     {
     	super();
     	ID_vendedor = 12345;
-    	cuota = 200000;
-        sueldo = 2000;
+    	meta = 200000;
         año_ingreso = 2001;
     }
 
-    Vendedor(int a, int b, int c, int d)
+    Vendedor(String a, String b, int c, int d, int e, int f, int g)
     {
-    	super();
-    	ID_vendedor = a;
-    	cuota = b;
-        sueldo = c;
-        año_ingreso = d;
-    }
-
-    Vendedor(String a , String b, int c,int d, int e, int f, int g)
-    {
-    	super.ponn(a);
-    	super.pona(b);
-    	super.ponnc(c);
-    	ID_vendedor = d;
-    	cuota = e;
-        sueldo = f;
+    	super(a, b, c, d);
+    	ID_vendedor = e;
+    	meta = f;
         año_ingreso = g;
-
     }
 
-    int obtI()
+    //getters heredados de persona
+    String getNombre()
+    {return super.getNombre();}
+    String getApellido()
+    {return super.getApellido();}
+    int getCi()
+    {return super.getCi();}
+    int getTelefono()
+    {return super.getTelefono();}
+    //getters de vendedor
+    int getID_vendedor()
     {return ID_vendedor;}
-    int obtC()
-    {return cuota;}
-    int obtS()
-    {return sueldo;}
+    int getMeta()
+    {return meta;}
+    int getAño_ingreso()
+    {return año_ingreso;}
 
-    void ponI(int a)
+    //setters heredados de persona
+    void setNombre(String a)
+    {super.setNombre(a);}
+    void setApellido(String a)
+    {super.setApellido(a);}
+    void setCi(int a)
+    {super.setCi(a);}
+    void setTelefono(int a)
+    {super.setTelefono(a);}
+    //setters de vendedor
+    void setID_vendedor(int a)
     {ID_vendedor = a;}
-    void ponC(int a)
-    {cuota = a;}
-    void ponS(int a)
-    {sueldo = a;}
-    void ponNombre(String a)
-    {super.ponn(a);}
-    void ponApellido(String a)
-    {super.pona(a);}
-    void ponCi(int a)
-    {super.ponnc(a);}
-
+    void setMeta(int a)
+    {meta = a;}
+    void setAño_ingreso(int a)
+    {año_ingreso = a;}
 
     void leerV() //puede tener el mismo nombre que en persona, no se confunde de metodo
     {
-        Scanner sc = new Scanner(System.in);
+        super.leer();
         System.out.println("Introduce ID de Vendedor: ");
         ID_vendedor = Leer.datoInt();
-        System.out.println("Introduce Comision: ");
-        cuota = Leer.datoInt();
-        System.out.println("Introduce sueldo: ");
-        sueldo = Leer.datoInt();
+        System.out.println("Introduce Meta: ");
+        meta = Leer.datoInt();
+        System.out.println("Introduce Año de ingreso: ");
+        año_ingreso = Leer.datoInt();
     }
 
     void mostrarV()
     {
-        System.out.println(ID_vendedor + " " + sueldo + " " + sueldo);
+        System.out.println(ID_vendedor + " " + meta);
     }
 
     //METODOS REVISAR
+    void ofrecer()
+    {System.out.println("Quetal puedo ayudarl@. Le comento que tenemos variedad de modelos");}
 
+    int antiguedad()
+    {return 2024 - año_ingreso;}
 }

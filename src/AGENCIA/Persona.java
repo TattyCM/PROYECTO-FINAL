@@ -23,7 +23,7 @@ public class Persona {
         fechan = 2004;
     }
 
-    Persona(String a, String b, int c, String d, int e, int f) //Constructor con argumentos
+    Persona(String a, String b, int c, String d, int e, int f) //Constructor con argumentos para persona
     {
         nombre = a;
         apellido = b;
@@ -31,6 +31,25 @@ public class Persona {
         direccion = d;
         telefono = e;
         fechan = f;
+    }
+
+    //Constructor con argumentos para vendedor
+    Persona(String a, String b, int c, int d)
+    {
+        nombre = a;
+        apellido = b;
+        ci = c;
+        telefono = d;
+    }
+
+    //Constructor con argumentos para cliente
+    Persona(String a, String b, int c, int d, String e)
+    {
+        nombre = a;
+        apellido = b;
+        ci = c;
+        telefono = d;
+        direccion = e;
     }
 
     String getNombre()

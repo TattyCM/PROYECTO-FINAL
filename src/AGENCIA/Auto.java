@@ -5,130 +5,133 @@ public class Auto {
     String marca;
     String modelo;
     String color;
+    int año;
     int precio;
-    int descuento;
-    String caja;
-    String maletera;
-    int capacidadMotor;
-    String tipoCombustible;
+    int descuento; //tasa de descuento
+    String caja; //tipo de caja automatico, mecanico
+    int maletera; //para trabajar con No = 0 y Si = 1
+    int capacidad_Motor; //El tamaño del motor se mide en litros
+    String tipo_Combustible; //gas, gasolina, diesel, electricos
+    String matricula;
 
     public
 
     Auto()
     {
     	marca = "Toyota";
-    	modelo ="Corolla";
-    	color ="Azul";
-    	precio = 25000;
-    	descuento = 2000;
-    	caja = "Manual";
-    	maletera = "Grande" ;
-    	capacidadMotor = 1800 ;
-    	tipoCombustible = "Gasolina" ;
+        modelo = "Hilux";
+        color = "Rojo";
+        año = 2021;
+        precio = 200000;
+        descuento = 15;
+        caja = "automatico";
+        maletera = 1;
+        capacidad_Motor = 5;
+        tipo_Combustible = "gas";
+        matricula = "A98h34";
     }
 
-    Auto(int d, int e, String f, String g, int h,String i)
+    Auto(String a, String b, String c, int d, int e, int f, String g, int h, int i, String j, String k)
 	{
-		marca= "Toyota";
-		modelo= "Hilux";
-		color= "Rojo";
-		precio= d;
-		descuento= e;
-		caja= f;
-		maletera= g;
-		capacidadMotor = h;
-		tipoCombustible = i;
+		marca = a;
+        modelo = b;
+        color = c;
+        año = d;
+        precio = e;
+        descuento = f;
+        caja = g;
+        maletera = h;
+        capacidad_Motor = i;
+        tipo_Combustible = j;
+        matricula = k;
 	}
 
-	Auto( String f, String g, int h,String i)
+    //Constructor para la factura
+	Auto(String a, String b, String c, int d, int e, int f, String g)
 	{
-		marca= "Toyota";
-		modelo = "RAV-4 Aqya";
-		color= "Gris";
-		precio= 200000;
-		descuento= 15000;
-		caja= f;
-		maletera= g;
-		capacidadMotor = h;
-		tipoCombustible = i;
+		marca = a;
+        modelo = b;
+        color = c;
+        año = d;
+        precio = e;
+        descuento = f;
+        matricula = g;
 	}
 
-    Auto(String a, String b, String c, int d, int e, String f, String g, int h, String i)
-    {
-    	marca = a;
-    	modelo = b;
-    	color = c;
-    	precio = d;
-    	descuento = e ;
-    	caja = f;
-    	maletera = g;
-    	capacidadMotor = h ;
-    	tipoCombustible = i ;
-    }
-
-    String obtMarca()
+    //Getters de auto
+    String getMarca()
     {return marca;}
-    String obtModelo()
+    String getModelo()
     {return modelo;}
-    String obtColor()
+    String getColor()
     {return color;}
-    int obtPrecio()
+    int getAño()
+    {return año;}
+    int getPrecio()
     {return precio;}
-    int obtDescuento()
+    int getDescuento()
     {return descuento;}
-    String obtCaja()
+    String getCaja()
     {return caja;}
-    String obtMaletera()
+    int getMaletera()
     {return maletera;}
-    int obtCapacidadMotor()
-    {return capacidadMotor;}
-    String obtTipoCombustible()
-    {return tipoCombustible;}
+    int getCapacidad_Motor()
+    {return capacidad_Motor;}
+    String getTipo_Combustible()
+    {return tipo_Combustible;}
+    String getMatricula()
+    {return matricula;}
+
+    //Setters de auto
+    void setMarca(String a)
+    {marca = a;}
+    void setModelo(String a)
+    {modelo = a;}
+    void setColor(String a)
+    {color = a;}
+    void setAño(int a)
+    {año = a;}
+    void setPrecio(int a)
+    {precio = a;}
+    void setDescuento(int a)
+    {descuento = a;}
+    void setCaja(String a)
+    {caja = a;}
+    void setMaletera(int a)
+    {maletera = a;}
+    void setCapacidad_Motor(int a)
+    {capacidad_Motor = a;}
+    void setTipo_Combustible(String a)
+    {tipo_Combustible = a;}
+    void setMatricula(String a)
+    {matricula = a;}
 
 
-    void ponMarca(String a)
-    {this.marca = a;}
-    void ponModelo(String a)
-    {this.modelo = a;}
-    void ponColor(String a)
-    {this.color = a;}
-    void ponPrecio(int a)
-    {this.precio = a;}
-    void ponDescuento(int a)
-    {this.descuento = a;}
-    void ponCaja(String a)
-    {this.caja = a;}
-    void ponMaletera(String a)
-    {this.maletera = a;}
-    void ponCapacidadMotor(int a)
-    {this.capacidadMotor = a;}
-    void ponTipoCombustible(String a)
-    {this.tipoCombustible = a;}
-
-
-    void leer()
+    void leerA()
     {
-        System.out.println("Ingrese la marca del auto: ");
-        marca=Leer.dato();
-        System.out.println("Ingrese el modelo del auto: ");
-        modelo=Leer.dato();
-        System.out.println("Ingrese el color del auto: ");
-        color=Leer.dato();
-        System.out.println("Ingrese el precio del auto: ");
-        precio=Leer.datoInt();
-        System.out.println("Ingrese el descuento del auto: ");
-        descuento=Leer.datoInt();
-        System.out.println("Ingrese el tipo de caja del auto: ");
-        caja=Leer.dato();
-        System.out.println("Ingrese el tipo de maletera del auto: ");
-        maletera=Leer.dato();
-        System.out.println("Ingrese la capacidad del motor del auto: ");
-        capacidadMotor=Leer.datoInt();
-        System.out.println("Ingrese el tipo de combustible del auto: ");
-        tipoCombustible=Leer.dato();
+        System.out.println("Marca: ");
+        marca = Leer.dato();
+        System.out.println("Modelo: ");
+        modelo = Leer.dato();
+        System.out.println("Color: ");
+        color = Leer.dato();
+        System.out.println("Año: ");
+        año = Leer.datoInt();
+        System.out.println("Precio: ");
+        precio = Leer.datoInt();
+        System.out.println("Descuento: ");
+        descuento = Leer.datoInt();
+        System.out.println("Caja: ");
+        caja = Leer.dato();
+        System.out.println("Maletera: ");
+        maletera = Leer.datoInt();
+        System.out.println("Capacidad del motor: ");
+        capacidad_Motor = Leer.datoInt();
+        System.out.println("Tipo de combustible: ");
+        tipo_Combustible = Leer.dato();
     }
 
-    void mostrar()
+    void mostrarA()
     {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
@@ -137,8 +140,8 @@ public class Auto {
         System.out.println("Descuento: " + descuento);
         System.out.println("Caja: " + caja);
         System.out.println("Maletera: " + maletera);
-        System.out.println("Capacidad del motor: " + capacidadMotor);
-        System.out.println("Tipo de combustible: " + tipoCombustible);
+        System.out.println("Capacidad del motor: " + capacidad_Motor);
+        System.out.println("Tipo de combustible: " + tipo_Combustible);
     }
 
     void arrancar()
@@ -150,17 +153,16 @@ public class Auto {
     void frenar()
     {System.out.println("Frenando el auto...");}
 
-    //METODO A REVISAR
-    void mismoPre(Auto A)
+    //Este metodo puede ir a sala de exhibicion
+    void comparaPrecio(Auto A)
 	{
-		if(precio==A.obtPrecio())
+		if(precio == A.getPrecio())
 		{System.out.println("Tienen el mismo precio");}
-		else {System.out.println("Tienen distintos precio");}
+		else
+        {System.out.println("Tienen distintos precio");}
 	}
 
     int PrecioFinal()
 	{return precio - descuento;}
-    int ObtenerFinal(Auto automovil)
-	{return automovil.PrecioFinal();}
 
 }

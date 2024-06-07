@@ -16,42 +16,48 @@ public class Cliente extends Persona{
     	presupuesto=20000;
     }
 
-    Cliente(int a, int b)
+    Cliente(String a, String b, int c, int d, String e, int f, int g)
     {
-        super();
-    	ID_Cliente = a;
-    	presupuesto = b;
+        super(a, b, c, d, e);
+    	ID_Cliente = f;
+    	presupuesto = g;
     }
 
-    Cliente(String a , String b, int c,int d, int e)
-    {
-    	super.ponn(a);
-    	super.pona(b);
-    	super.ponnc(c);
-    	ID_Cliente = d;
-    	presupuesto = e;
-    }
-
-    int obtIC()
+    //Getters heredados de persona
+    String getNombre()
+    {return super.getNombre();}
+    String getApellido()
+    {return super.getApellido();}
+    int getCi()
+    {return super.getCi();}
+    int getTelefono()
+    {return super.getTelefono();}
+    String getDireccion()
+    {return super.getDireccion();}
+    //Getters de cliente
+    int getID_Cliente()
     {return ID_Cliente;}
-    int obtp()
+    int getPresupuesto()
     {return presupuesto;}
-    void ponIC(int a)
-    {ID_Cliente = a;}
-    void ponp(int a)
-    {presupuesto = a;}
 
-    //Setters de herencia de persona
-    void ponNombre(String a)
-    {super.ponn(a);}
-    void ponApellido(String a)
-    {super.pona(a);}
-    void ponCi(int a)
-    {super.ponnc(a);}
+    //Setters heredados de persona
+    void setNombre(String a)
+    {super.setNombre(a);}
+    void setApellido(String a)
+    {super.setApellido(a);}
+    void setCi(int a)
+    {super.setCi(a);}
+    void setTelefono(int a)
+    {super.setTelefono(a);}
+    //Setters de cliente
+    void setID_Cliente(int a)
+    {ID_Cliente = a;}
+    void setPresupuesto(int a)
+    {presupuesto = a;}
 
     void leerC()
     {
-        Scanner sc = new Scanner(System.in);
+        super.leer();
         System.out.println("Introduce ID de Cliente: ");
         ID_Cliente = Leer.datoInt();
         System.out.println("Introduce presupuesto: ");
@@ -59,9 +65,12 @@ public class Cliente extends Persona{
     }
 
     void mostrarC()
-    {System.out.println(ID_Cliente + " " + presupuesto);}
+    {
+        super.mostrar();
+        System.out.println(ID_Cliente + " " + presupuesto);
+    }
 
-
-
+    void comprar()
+    {System.out.println("Me lo llevo");}
 
 }
