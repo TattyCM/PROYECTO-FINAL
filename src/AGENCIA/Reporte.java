@@ -14,4 +14,10 @@ public class Reporte {
         F[1].
 
     }
+
+    //Factura
+    void VendedorActivo
+    {
+        for (i = 1; i <= nfac; )
+    }
 }

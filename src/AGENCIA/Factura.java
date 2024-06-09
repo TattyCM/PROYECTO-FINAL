@@ -50,29 +50,25 @@ public class Factura {
 
 	void leer()
 	{
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Introduce el Vendedor: ");
-        vendedor = scanner.nextLine();
+		Vendedor.leerV();
         System.out.print("Introduce el Cliente: ");
-        cliente = scanner.nextLine();
+        Cliente.leerC();
         System.out.print("Introduce el Auto: ");
-        auto = scanner.nextLine();
-        System.out.print("Introduce el Matricula: ");
-        matricula= scanner.nextLine();
-        scanner.nextLine();
+        Auto.leerA();
         System.out.print("Introduce fecha: ");
-        fecha = scanner.nextInt();
+        fecha = Leer.datoInt();
     }
-
-
-
 
 	void mostrar()
 	{
-		System.out.println(vendedor +" "+ cliente +" "+ auto + " "+ fecha +" "+ matricula);
+		Vendedor.mostrarV();
+		Cliente.leerC();
+		Auto.mostrarA();
+		System.out.println(fecha);
 	}
 
-    //Revisar si puede tener mas metodos
-	//metodo precio final
+
 
 }
