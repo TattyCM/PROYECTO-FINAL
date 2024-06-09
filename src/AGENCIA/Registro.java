@@ -1,4 +1,5 @@
 package AGENCIA;
+import java.util.Scanner;
 
 public class Registro {
     private
@@ -29,6 +30,7 @@ public class Registro {
     //Setters de factura
     void setID_reporte(int a)
     {ID_reporte = a;}
+
 
     void leerR()
     {

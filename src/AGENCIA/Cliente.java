@@ -1,5 +1,4 @@
 package AGENCIA;
-
 import java.util.Scanner;
 
 public class Cliente extends Persona{

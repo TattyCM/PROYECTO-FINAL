@@ -1,4 +1,5 @@
 package AGENCIA;
+import java.util.Scanner;
 
 public class Auto {
     private
