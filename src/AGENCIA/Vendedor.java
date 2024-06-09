@@ -80,13 +80,11 @@ public class Vendedor extends Persona{
     }
 
     void mostrarV()
-    {
-        System.out.println(ID_vendedor + " " + meta);
-    }
+    {System.out.println(ID_vendedor + " " + meta);}
 
     //METODOS REVISAR
     void ofrecer()
-    {System.out.println("Quetal puedo ayudarl@. Le comento que tenemos variedad de modelos");}
+    {System.out.println("Quetal, puedo ayudarl@? Le comento que tenemos variedad de modelos");}
 
     int antiguedad()
     {return 2024 - año_ingreso;}
